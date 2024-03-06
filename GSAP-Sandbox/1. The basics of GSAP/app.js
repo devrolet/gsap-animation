@@ -19,4 +19,10 @@ TL
 .from('.img2', {autoAlpha: 0, y: -50}) // add third arg if you want TL to trigger something early(-) or later(+).
 .from('.img3', {autoAlpha: 0, y: -50})
 .from('h1', {autoAlpha: 0, y: 50})
+.addLabel('endAnim')
 .from('p', {autoAlpha: 0, y: 50});
+
+setTimeout(() => {
+    TL.seek('endAnim')
+    TL.play()
+}, 1000)
