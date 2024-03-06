@@ -1,16 +1,10 @@
 console.log("GSAP ENGINE: ", gsap);
 const img1 = document.querySelector(".img1");
 
-// Stagger
-gsap.from('img', {
-  autoAlpha: 0,
-  y: -100,
-  ease: "power4",
-  duration: 2,
-//   stagger: 0.5 // staggers one after other with 0.5 delay
-  stagger: {
-    each: 0.5,
-    from: "end" // end and center
-    // amount: 1
-  }
+// Animate random values, Stagger group of buttons
+gsap.to(".btn", { 
+    duration: 0.5, 
+    stagger: 0.2, 
+    x: "random(-100, 100)" // adding another # like 10 will round the random number by 10
+    // you can also add an array. for example x: "random([20, 50, 60, -30, -70])"
 });
