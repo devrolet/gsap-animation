@@ -1,7 +1,13 @@
-console.log(gsap);
+console.log('GSAP ENGINE: ', gsap);
 
-// GSAP.TO METHOD ARGS:(targetelement,  animationObj: {x, y, duration(0.5 default), })
-gsap.to('.img1', {x: 100, y: 100, backgroundColor: "red", duration: 2, rotate: 45});
+// GSAP.FROM METHOD ARGS:(targetelement,  animationObj: {})
 
-// You can also use `img${1}` to loop
+const img1 = document.querySelector('.img1');
+
+// autoAlpha prevents flashing images caused by opacity and visibility - set element to visibility: 0 in the css before using autoAlpha
+gsap.from(img1, {autoAlpha: 0, y: -300, duration: 2});
+
+document.querySelector('.btn').addEventListener('click', () => {
+    gsap.from(img1, { autoAlpha: 0, duration: 2 });
+});
 
