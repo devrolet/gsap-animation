@@ -1,16 +1,16 @@
 console.log("GSAP ENGINE: ", gsap);
 const img1 = document.querySelector(".img1");
 
-// EASING IN GSAP: See more at https://gsap.com/docs/v3/Eases
-// Utility Props: More found in the GSAP docs
-gsap.from(img1, {
+// Stagger
+gsap.from('img', {
   autoAlpha: 0,
   y: -100,
-  rotation: 90,
-  ease: "bounce",
+  ease: "power4",
   duration: 2,
-  delay: 0.5,
-  repeat: 2,
-  repeatDelay: 0.2,
-  yoyo: true
+//   stagger: 0.5 // staggers one after other with 0.5 delay
+  stagger: {
+    each: 0.5,
+    from: "end" // end and center
+    // amount: 1
+  }
 });
