@@ -7,7 +7,15 @@ gsap.from('.b2 h2', {
         trigger: ".b2 h2",
         markers: true,
         // Trigger Scroller
-        start: "top 50%", // "top bottom" is default value "top 50%" is 50% of the page "top center+=100" is 100px down from center
-        end: "bottom top"
+        start: "top 80%", // "top bottom" is default value "top 50%" is 50% of the page "top center+=100" is 100px down from center
+        end: "bottom 30%",
+        // onEnter onLeave onEnterBack onLeaveBack
+        toggleActions: "play pause reverse reset",
+        // play pause resume reset restart complete reverse none
+        onEnter: () => console.log("ENTER"),
+        onLeave: () => console.log("LEAVE"),
+        onEnterBack: () => console.log("ENTERBACK"),
+        onLeaveBack: () => console.log("LEAVEBACK"),
+        scrub: 1
     }
 })
