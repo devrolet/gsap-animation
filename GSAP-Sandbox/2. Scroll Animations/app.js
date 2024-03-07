@@ -16,6 +16,12 @@ gsap.from('.b2 h2', {
         onLeave: () => console.log("LEAVE"),
         onEnterBack: () => console.log("ENTERBACK"),
         onLeaveBack: () => console.log("LEAVEBACK"),
-        scrub: 1
+        scrub: true // could be numberic too
     }
+})
+
+ScrollTrigger.create({
+    trigger: '.b2',
+    pin: true,
+    markers: true
 })
