@@ -16,6 +16,9 @@ const loader = () => {
     .add(() => {
         document.querySelector('video').play()
     }, '-=0.8')
+    .add(() => {
+        document.querySelector('.load-container', style.display = "none");
+    })
 }
 
 window.addEventListener('load', loader);
