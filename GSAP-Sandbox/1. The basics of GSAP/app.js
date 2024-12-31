@@ -6,8 +6,8 @@ const TL = gsap.timeline({
         duration: 1,
         ease: "power4"
     },
-    // repeat: -1,
-    // yoyo: true,
+    // repeat: -1, // repeats the animation, use with yoyo to reverse animation
+    // yoyo: true, // reverses the animation (like a yoyo)
     onComplete: () => console.log("COMPLETE"),
     onStart: () => console.log("START")
 

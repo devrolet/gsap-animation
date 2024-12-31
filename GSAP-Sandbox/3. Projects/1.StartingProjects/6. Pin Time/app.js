@@ -1,8 +1,8 @@
 const src = [
-    "ressources/spartan.svg",
-    "ressources/castle.svg",
-    "ressources/da-vinci.svg",
-    "ressources/airplane.svg",
+    "resources/spartan.svg",
+    "resources/castle.svg",
+    "resources/da-vinci.svg",
+    "resources/airplane.svg",
   ];
   
   const dates = [
